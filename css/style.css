@@ -1,0 +1,230 @@
+:root {
+  --violet: hsl(257, 40%, 49%);
+  --soft-magenta: hsl(300, 69%, 71%);
+}
+
+/* CSS Reset */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+p {
+  margin: 0;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1 {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a {
+  /* text-decoration-skip-ink: auto; */
+  text-decoration: none;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+
+button {
+  font: inherit;
+}
+
+/* Mobile */
+
+body {
+  background-color: var(--violet);
+  background-image: url("../images/bg-mobile.svg");
+  background-repeat: no-repeat;
+  font-family: "Open Sans", sans-serif;
+  color: #fff;
+  text-align: center;
+}
+
+.wrapper {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  place-content: center;
+  place-items: center;
+  /* margin-left: 8px;
+  margin-right: 8px; */
+}
+
+.main {
+  max-width: calc(375 / 16 * 1rem);
+  padding: calc(38.2 / 16 * 1rem) calc(39 / 16 * 1rem) calc(40 / 16 * 1rem)
+    calc(40 / 16 * 1rem);
+}
+
+.main__logo-container {
+  width: calc(120 / 16 * 1rem);
+  height: calc(19 / 16 * 1rem);
+}
+
+.main__mockup-container {
+  /* width: calc(296/16 * 1rem);
+  height: calc(209/16 * 1rem); */
+
+  margin-top: calc(70 / 16 * 1rem);
+}
+
+.content__heading {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: calc(24 / 16 * 1rem);
+  line-height: 1.5;
+  margin-top: calc(60 / 16 * 1rem);
+}
+
+.content__paragraph {
+  margin-top: 1rem;
+}
+
+.content__register-button {
+  font-family: "Poppins", sans-serif;
+  margin-top: calc(24 / 16 * 1rem);
+  border: none;
+  border-radius: 20px;
+  background-color: #fff;
+  color: var(--violet);
+  padding: 8px 80px;
+  box-shadow: 1px 3px 5px hsl(0, 0%, 0%, 74%);
+}
+
+.main__social-icons {
+  margin-top: calc(64 / 16 * 1rem);
+  display: flex;
+  justify-content: center;
+  gap: 10.5px;
+}
+
+/* Footer */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(46, 87%, 50%);
+}
+
+@media (min-width: calc(385/16 * 1rem)) {
+  body {
+    background-image: url("../images/bg-desktop.svg");
+    background-size: 100% 100%;
+  }
+}
+
+@media (min-width: calc(1220/16 * 1rem)) {
+  body {
+    text-align: revert;
+  }
+
+  .wrapper {
+    margin-left: revert;
+    margin-right: revert;
+  }
+
+  .main {
+    max-width: calc(1440 / 16 * 1rem);
+    padding: 4rem 5rem 2.5rem 5rem;
+    display: grid;
+    /* grid-template-columns: 1fr 1fr; */
+    grid-template-areas:
+      "logo logo"
+      "mockup main-content"
+      "social-icon social-icon";
+  }
+
+  .main__logo-container {
+    width: calc(200 / 16 * 1rem);
+    height: calc(32 / 16 * 1rem);
+    grid-area: logo;
+    margin-bottom: calc(104 / 16 * 1rem);
+  }
+
+  .main__mockup-container {
+    width: calc(696 / 16 * 1rem);
+    height: calc(493 / 16 * 1rem);
+    margin-top: revert;
+    margin-right: calc(59 / 16 * 1rem);
+    grid-area: mockup;
+    align-self: start;
+  }
+
+  .main__content {
+    grid-area: main-content;
+  }
+
+  .content__heading {
+    font-size: calc(40 / 16 * 1rem);
+    line-height: calc(60 / 40);
+  }
+
+  .content__paragraph {
+    font-size: calc(18 / 16 * 1rem);
+    margin-top: calc(24 / 16 * 1rem);
+    line-height: calc(27 / 18);
+  }
+
+  .content__register-button {
+    font-size: calc(18 / 16 * 1rem);
+    border-radius: 28px;
+    padding: 14px 63px;
+    line-height: calc(27 / 18);
+  }
+
+  .content__register-button:hover,
+  .content__register-button:focus {
+    cursor: pointer;
+    background-color: var(--soft-magenta);
+    color: #fff;
+  }
+
+  .main__social-icons {
+    grid-area: social-icon;
+    gap: 16px;
+    justify-self: end;
+  }
+
+  i:hover,
+  i:focus {
+    color: var(--soft-magenta);
+  }
+
+  .attribution {
+    font-size: calc(14 / 16 * 1rem);
+  }
+}
