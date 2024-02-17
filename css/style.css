@@ -90,8 +90,8 @@ body {
 }
 
 .main__logo-container {
-  width: calc(120 / 16 * 1rem);
-  height: calc(19 / 16 * 1rem);
+  width: 120px;
+  height: 19px;
 }
 
 .main__mockup-container {
@@ -122,6 +122,10 @@ body {
   color: var(--violet);
   padding: 8px 80px;
   box-shadow: 1px 3px 5px hsl(0, 0%, 0%, 74%);
+  display: block;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .main__social-icons {
@@ -170,8 +174,8 @@ body {
   }
 
   .main__logo-container {
-    width: calc(200 / 16 * 1rem);
-    height: calc(32 / 16 * 1rem);
+    width: 200px;
+    height: 32px;
     grid-area: logo;
     margin-bottom: calc(104 / 16 * 1rem);
   }
@@ -205,6 +209,8 @@ body {
     border-radius: 28px;
     padding: 14px 63px;
     line-height: calc(27 / 18);
+    margin-left: revert;
+    margin-right: revert;
   }
 
   .content__register-button:hover,
