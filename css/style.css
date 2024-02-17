@@ -140,6 +140,7 @@ body {
   color: hsl(46, 87%, 50%);
 }
 
+/* Desktop */
 @media (min-width: calc(385/16 * 1rem)) {
   body {
     background-image: url("../images/bg-desktop.svg");
