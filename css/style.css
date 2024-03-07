@@ -226,8 +226,8 @@ body {
     justify-self: end;
   }
 
-  i:hover,
-  i:focus {
+  a.social-icons__icon:hover i,
+  a.social-icons__icon::focus i {
     color: var(--soft-magenta);
   }
 
