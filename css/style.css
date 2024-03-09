@@ -227,7 +227,7 @@ body {
   }
 
   a.social-icons__icon:hover i,
-  a.social-icons__icon::focus i {
+  a.social-icons__icon:focus i {
     color: var(--soft-magenta);
   }
 
